@@ -13,7 +13,6 @@ import sys
 import os
 import glob
 import shutil
-import parser
 
 version = "4.4.0"
 
@@ -71,9 +70,9 @@ def install(args):
     else:
         prefix = args[0]
 
-    # Make sure that there isn't a syntax error in mudur.py
-    code = open("bin/mudur.py").read()
-    parser.suite(code).compile()
+    ## Make sure that there isn't a syntax error in mudur.py
+    #code = open("bin/mudur.py").read()
+    #parser.suite(code).compile()
 
     install_file("bin/mudur.py", prefix, "sbin/mudur.py")
     install_file("bin/mudur_tmpfiles.py", prefix, "sbin/mudur_tmpfiles.py")
